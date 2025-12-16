@@ -48,9 +48,9 @@ jobs:
           ~/.cargo/registry/cache/
           ~/.cargo/git/db/
           target/
-        key: ${{ runner.os }}-cargo-windows-${{ hashFiles('**/Cargo.lock') }}
+        key: ${{ runner.os }}-cargo-x86_64-pc-windows-gnu-${{ hashFiles('**/Cargo.lock') }}
         restore-keys: |
-          ${{ runner.os }}-cargo-windows-
+          ${{ runner.os }}-cargo-x86_64-pc-windows-gnu-
     - name: Install MinGW
       run: |
         sudo apt-get update
